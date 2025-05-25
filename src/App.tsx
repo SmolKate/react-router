@@ -1,33 +1,29 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { NavLink, Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Category from './pages/Category'
+import Character from './pages/Character'
+import Episode from './pages/Episode'
+import Place from './pages/Place'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ul>
+        <li><NavLink to="/">Главная</NavLink></li>
+        <li><NavLink to="/category/characters">Герои</NavLink></li>
+        <li><NavLink to="/category/locations">Локации</NavLink></li>
+        <li><NavLink to="/category/episodes">Эпизоды</NavLink></li>
+
+      </ul>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/category/:name" element={<Category />} />
+        <Route path="/character/:id" element={<Character />} />
+        <Route path="/location/:id" element={<Place />} />
+        <Route path="/episode/:id" element={<Episode />} />
+      </Routes>
     </>
   )
 }
