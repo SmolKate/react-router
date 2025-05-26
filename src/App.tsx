@@ -6,6 +6,7 @@ import Character from './pages/Character'
 import Episode from './pages/Episode'
 import Place from './pages/Place'
 import CategoriesLayout from './layout/CategoriesLayout'
+import NotFound from './pages/NotFound'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/character/:id" element={<Character />} />
           <Route path="/location/:id" element={<Place />} />
           <Route path="/episode/:id" element={<Episode />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </>
