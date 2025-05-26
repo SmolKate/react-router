@@ -12,7 +12,7 @@ function App() {
     <>
       <ul>
         <li><NavLink to="/">Главная</NavLink></li>
-        <li><NavLink to="/category/characters">Герои</NavLink></li>
+        <li><NavLink to="/category/characters">Персонажи</NavLink></li>
         <li><NavLink to="/category/locations">Локации</NavLink></li>
         <li><NavLink to="/category/episodes">Эпизоды</NavLink></li>
 
