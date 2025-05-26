@@ -1,9 +1,12 @@
-import { useLocation } from "react-router-dom"
-import type { Character } from "../types"
+import { useParams } from "react-router-dom"
+import { getCharacter } from "../utils/helpers"
+import NotFound from "./NotFound"
 
 const CharacterView = () => {
-    const location = useLocation()
-    const data = location.state as Character
+    const { id } = useParams()
+    const data = getCharacter(Number(id))
+
+    if (!data) return <NotFound />
     const { name, status, gender, type, image } = data
 
     return (

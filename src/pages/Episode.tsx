@@ -1,9 +1,12 @@
-import { useLocation } from "react-router-dom"
-import type { Episode } from "../types"
+import { useParams } from "react-router-dom"
+import NotFound from "./NotFound"
+import { getEpisode } from "../utils/helpers"
 
 const EpisodeView = () => {
-    const location = useLocation()
-    const data = location.state as Episode
+    const { id } = useParams()
+    const data = getEpisode(Number(id))
+    
+    if (!data) return <NotFound />
     const { name, air_date, episode } = data
     
     return (

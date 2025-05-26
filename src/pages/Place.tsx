@@ -1,9 +1,12 @@
-import { useLocation } from "react-router-dom"
-import type { Place } from "../types"
+import { useParams } from "react-router-dom"
+import { getPlace } from "../utils/helpers"
+import NotFound from "./NotFound"
 
 const PlaceView = () => {
-    const location = useLocation()
-    const data = location.state as Place
+    const { id } = useParams()
+    const data = getPlace(Number(id))
+
+    if (!data) return <NotFound />
     const { name, type, dimension } = data
 
     return (
