@@ -1,7 +1,7 @@
-import charactersJson from "../mocks/characters.json"
-import episodesJson from "../mocks/episodes.json"
-import locationsJson from "../mocks/locations.json"
-import type { Category, Character, Episode, Place } from "../types"
+import charactersJson from '../mocks/characters.json'
+import episodesJson from '../mocks/episodes.json'
+import locationsJson from '../mocks/locations.json'
+import type { Category, Character, Episode, Place } from '../types'
 
 const categories = {
     characters: charactersJson,

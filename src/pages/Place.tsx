@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom"
-import { getPlace } from "../utils/helpers"
-import NotFound from "./NotFound"
+import { useParams } from 'react-router-dom'
+import { getPlace } from '../utils/helpers'
+import NotFound from './NotFound'
 
 const PlaceView = () => {
     const { id } = useParams()

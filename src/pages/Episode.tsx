@@ -1,11 +1,11 @@
-import { useParams } from "react-router-dom"
-import NotFound from "./NotFound"
-import { getEpisode } from "../utils/helpers"
+import { useParams } from 'react-router-dom'
+import { getEpisode } from '../utils/helpers'
+import NotFound from './NotFound'
 
 const EpisodeView = () => {
     const { id } = useParams()
     const data = getEpisode(Number(id))
-    
+
     if (!data) return <NotFound />
     const { name, air_date, episode } = data
     

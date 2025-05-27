@@ -1,6 +1,6 @@
-import { Link, useParams } from "react-router-dom"
-import { getCategoryData } from "../utils/helpers"
-import { isCategory } from "../types"
+import { Link, useParams } from 'react-router-dom'
+import { getCategoryData } from '../utils/helpers'
+import { isCategory } from '../types'
 
 const categoryLinks = {
     characters: 'character',

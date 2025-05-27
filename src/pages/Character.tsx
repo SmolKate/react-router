@@ -1,6 +1,6 @@
-import { useParams } from "react-router-dom"
-import { getCharacter } from "../utils/helpers"
-import NotFound from "./NotFound"
+import { useParams } from 'react-router-dom'
+import { getCharacter } from '../utils/helpers'
+import NotFound from './NotFound'
 
 const CharacterView = () => {
     const { id } = useParams()
