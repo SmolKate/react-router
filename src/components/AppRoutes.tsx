@@ -7,18 +7,21 @@ import Place from '../pages/Place'
 import CategoriesLayout from '../layout/CategoriesLayout'
 import NotFound from '../pages/NotFound'
 import { appPaths } from '../utils/appPaths'
+import Login from '../pages/Login'
+import PrivateRoute from './PrivateRoute'
 
 const AppRoutes = () => {
     return (
         <>
             <Routes>
                 <Route path={appPaths.home}element={<Home />} />
+                <Route path={appPaths.login}element={<Login />} />
                 <Route path={appPaths.contentRoot} element={<CategoriesLayout />}>
-                <Route path={appPaths.category(':name')} element={<Category />} />
-                <Route path={appPaths.character} element={<Character />} />
-                <Route path={appPaths.location} element={<Place />} />
-                <Route path={appPaths.episode} element={<Episode />} />
-                <Route path="*" element={<NotFound />} />
+                    <Route path={appPaths.category(':name')} element={<PrivateRoute><Category /></PrivateRoute>} />
+                    <Route path={appPaths.character} element={<PrivateRoute><Character /></PrivateRoute>} />
+                    <Route path={appPaths.location} element={<PrivateRoute><Place /></PrivateRoute>} />
+                    <Route path={appPaths.episode} element={<PrivateRoute><Episode /></PrivateRoute>} />
+                    <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>
         </>
