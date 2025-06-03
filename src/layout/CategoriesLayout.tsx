@@ -1,5 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import { appPaths } from '../utils/appPaths'
+import { Suspense } from 'react'
 
 const CategoriesLayout = () => {
     return (
@@ -10,7 +11,9 @@ const CategoriesLayout = () => {
                 <li><NavLink to={appPaths.category('locations')}>Локации</NavLink></li>
                 <li><NavLink to={appPaths.category('episodes')}>Эпизоды</NavLink></li>
             </ul>
-            <Outlet />
+            <Suspense fallback={<h3>Loading...</h3>}>
+                <Outlet />
+            </Suspense>
         </>
     )
 }
