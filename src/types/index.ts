@@ -32,10 +32,22 @@ const isCategory = (value: string): value is Category => {
     return CATEGORIES.includes(value as Category)
 }
 
+type Data = (Character | Episode | Place)[]
+
+interface CategoryResponse {
+    results: Data,
+    info: {
+        pages: number,
+    },
+}
+
+
 export {
     type Category,
     type Character,
     type Episode,
     type Place,
+    type CategoryResponse,
+    type Data,
     isCategory,
 }

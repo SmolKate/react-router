@@ -1,10 +1,18 @@
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { getCharacter } from '../utils/helpers'
+import baseApi from '../utils/baseApi'
+import type { Character } from '../types'
 import NotFound from './NotFound'
 
 const CharacterView = () => {
     const { id } = useParams()
-    const data = getCharacter(Number(id))
+    const [data, setData] = useState<Character | null>(null)
+
+    useEffect(() => {
+        if (id) {
+            baseApi.get<Character>(`character/${id}`).then((res) => setData(res.data))
+        }
+    }, [id])
 
     if (!data) return <NotFound />
     const { name, status, gender, type, image } = data

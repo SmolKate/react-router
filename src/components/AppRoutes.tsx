@@ -1,14 +1,16 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home'
-import Category from '../pages/Category'
-import Character from '../pages/Character'
-import Episode from '../pages/Episode'
-import Place from '../pages/Place'
 import CategoriesLayout from '../layout/CategoriesLayout'
 import NotFound from '../pages/NotFound'
 import { appPaths } from '../utils/appPaths'
 import Login from '../pages/Login'
 import PrivateRoute from './PrivateRoute'
+import { lazy } from 'react'
+
+const Category = lazy(() => import('../pages/Category'))
+const Character = lazy(() => import('../pages/Character'))
+const Episode = lazy(() => import('../pages/Episode'))
+const Place = lazy(() => import('../pages/Place'))
 
 const AppRoutes = () => {
     return (
