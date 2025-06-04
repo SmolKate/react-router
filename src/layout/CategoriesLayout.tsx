@@ -13,7 +13,7 @@ const CategoriesLayout = () => {
                 <li><NavLink to={appPaths.category('episodes')}>Эпизоды</NavLink></li>
             </ul>
             <ErrorBoundary>
-                 <Suspense fallback={<h3>Loading...</h3>}>
+                 <Suspense fallback={<h3>загрузка ...</h3>}>
                     <Outlet />
                 </Suspense>
             </ErrorBoundary>
