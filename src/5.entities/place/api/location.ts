@@ -1,4 +1,4 @@
-import baseApi from '../baseApi'
+import { baseApi } from '../../../6.shared/api'
 
 export type Place = {
     id: number

@@ -1,7 +1,7 @@
-import baseApi from '../baseApi'
-import type { Character } from './character'
-import type { Episode } from './episode'
-import type { Place } from './location'
+import { baseApi } from '../../../6.shared/api'
+import type { Character } from '../../character/api'
+import type { Episode } from '../../episode/api'
+import type { Place } from '../../place/api'
 
 export type Data = (Character | Episode | Place)[]
 

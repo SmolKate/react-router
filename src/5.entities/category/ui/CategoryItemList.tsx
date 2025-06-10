@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import type { Data } from '../../../6.shared/api'
+import type { Data } from '../api'
 
 interface ICategoryItemListProps {
     data: Data

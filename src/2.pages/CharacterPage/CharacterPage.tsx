@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { NotFound } from '../../6.shared/ui'
-import { getCharacter, type Character } from '../../6.shared/api'
 import { CharacterView } from '../../5.entities/character/ui'
+import { getCharacter, type Character } from '../../5.entities/character/api'
 
 const CharacterPage = () => {
     const { id } = useParams()

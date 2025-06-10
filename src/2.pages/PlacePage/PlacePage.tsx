@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { NotFound } from '../../6.shared/ui'
-import { getPlace, type Place } from '../../6.shared/api'
 import { PlaceView } from '../../5.entities/place/ui'
+import { getPlace, type Place } from '../../5.entities/place/api'
 
 const PlacePage = () => {
     const { id } = useParams()

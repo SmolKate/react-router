@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState} from 'react'
-import { isCategory, type Data, getCategory, type Category } from '../../6.shared/api'
 import { CategoryItemList } from '../../5.entities/category/ui'
+import { getCategory, isCategory, type Category, type Data } from '../../5.entities/category/api'
 import './styles.css'
 
 const categoryLinks = {

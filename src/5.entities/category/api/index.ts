@@ -1,0 +1,1 @@
+export { getCategory, type Data, isCategory, type Category } from './categoryType'

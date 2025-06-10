@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { NotFound } from '../../6.shared/ui'
-import { getEpisode, type Episode } from '../../6.shared/api'
 import { EpisodeView } from '../../5.entities/episode/ui'
+import { getEpisode, type Episode } from '../../5.entities/episode/api'
 
 const EpisodePage = () => {
     const { id } = useParams()
