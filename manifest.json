@@ -1,0 +1,42 @@
+{
+"name": "Awesome app",
+"short_name": "AwesomeApp",
+"start_url": "/index.html",
+"id": "/index.html",
+"display": "standalone",
+"description": "A description for your application",
+"lang": " The default language of your application",
+"dir": "auto",
+"theme_color": "#2e7d32",
+"background_color": "#000000",
+"orientation": "portrait-primary",
+"icons": [
+    {
+        "src": "https://www.pwabuilder.com/assets/icons/icon_512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+    },
+    {
+        "src": "https://www.pwabuilder.com/assets/icons/icon_192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+    }
+],
+"screenshots": [
+    {
+        "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+        "sizes": "1630x918",
+        "type": "image/png",
+        "description": "A screenshot of the home page",
+        "form_factor": "wide"
+    },
+    {
+        "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+        "sizes": "1630x918",
+        "type": "image/png",
+        "description": "A screenshot of the home page"
+    }
+]
+}
