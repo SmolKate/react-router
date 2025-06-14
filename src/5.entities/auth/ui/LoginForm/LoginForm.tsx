@@ -1,6 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import type { FormEvent } from 'react'
-import { useAuth } from '../model'
+import { Button, TextField } from '../../../../6.shared/ui/kit'
+import { useAuth } from '../../model'
+import './styles.css'
 
 const LoginForm = ({from}: {from: string} ) => {
     const auth = useAuth()
@@ -17,10 +19,17 @@ const LoginForm = ({from}: {from: string} ) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <label>
-                Имя пользователя: <input type="text" name="username" />
-            </label>
-            <button type="submit">Подтвердить</button>
+            <TextField
+                type="text"
+                name="username"
+                label="Имя пользователя"
+                focused
+                variant="standard"
+                required
+                color="success"
+                className="login-form-input"
+            />
+            <Button variant="contained" color="success" type="submit">Подтвердить</Button>
         </form>
     )
 }

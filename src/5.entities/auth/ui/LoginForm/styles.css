@@ -1,0 +1,6 @@
+.login-form-input {
+    .MuiInputBase-root {
+        color: white;
+        margin-right: 24px;
+    }
+}
