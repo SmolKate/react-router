@@ -4,7 +4,7 @@ import { Button, TextField } from '../../../../6.shared/ui/kit'
 import { useAuth } from '../../model'
 import './styles.css'
 
-const LoginForm = ({from}: {from: string} ) => {
+const LoginForm = ({from}: {from: string | undefined} ) => {
     const auth = useAuth()
     const navigate = useNavigate()
 

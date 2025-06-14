@@ -6,7 +6,7 @@ const LoginPage = () => {
     const location = useLocation() 
     const state = location.state as PrivateRouteState
 
-    return <LoginForm from={state.from} />
+    return <LoginForm from={state?.from} />
 }
 
 export {
