@@ -7,10 +7,22 @@ import { CategoriesLayout, PrivateRouteLayout } from '../../../3.widgets/layout'
 import { appPaths } from '../../../6.shared/config'
 import { BaseLayout } from '../../../3.widgets/layout/BaseLayout'
 
-const CategoryPage = lazy(() => import('../../../2.pages/CategoryPage').then((module) => ({default: module.CategoryPage})))
-const CharacterPage = lazy(() => import('../../../2.pages/CharacterPage').then((module) => ({default: module.CharacterPage})))
-const EpisodePage = lazy(() => import('../../../2.pages/EpisodePage').then((module) => ({default: module.EpisodePage})))
-const PlacePage = lazy(() => import('../../../2.pages/PlacePage').then((module) => ({default: module.PlacePage})))
+const CategoryPage = lazy(() => import('../../../2.pages/CategoryPage')
+    .then((module) => ({default: module.CategoryPage}))
+    .catch(() => ({ default: () => <NotFoundPage /> }))
+)
+const CharacterPage = lazy(() => import('../../../2.pages/CharacterPage')
+    .then((module) => ({default: module.CharacterPage}))
+    .catch(() => ({ default: () => <NotFoundPage /> }))
+)
+const EpisodePage = lazy(() => import('../../../2.pages/EpisodePage')
+    .then((module) => ({default: module.EpisodePage}))
+    .catch(() => ({ default: () => <NotFoundPage /> }))
+)
+const PlacePage = lazy(() => import('../../../2.pages/PlacePage')
+    .then((module) => ({default: module.PlacePage}))
+    .catch(() => ({ default: () => <NotFoundPage /> }))
+)
 
 const Routing = () => (
     <Routes>

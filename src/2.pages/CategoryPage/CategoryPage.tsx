@@ -33,7 +33,7 @@ const CategoryPage = () => {
 
                     setData(prevState => {
                         const commonData = [...prevState]
-                        results.forEach((result) => {
+                        results?.forEach((result) => {
                             const hasResult = prevState.find(elem => elem.id === result.id)
                             if (!hasResult) commonData.push(result)
                         })
