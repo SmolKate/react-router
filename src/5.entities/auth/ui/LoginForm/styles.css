@@ -1,6 +1,7 @@
-.login-form-input {
+.login-form-input.MuiFormControl-root {
+    margin: 24px;
+
     .MuiInputBase-root {
         color: white;
-        margin-right: 24px;
     }
 }
